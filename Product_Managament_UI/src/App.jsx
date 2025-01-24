@@ -7,6 +7,7 @@ import Navbar from './component/Navbar.jsx'
 import { Routes ,Router} from 'react-router-dom'
 import Home from './component/Home.jsx'
 import AddProduct from './component/AddProduct.jsx'
+import EditProduct from './component/EditProduct.jsx'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Router path ='/' element={<Home/>} />
         <Router path ='/addProduct' element={<AddProduct/>} />
+        <Router path ='/editProduct/:id' element={<EditProduct/>} />
 
       </Routes>
       </>
