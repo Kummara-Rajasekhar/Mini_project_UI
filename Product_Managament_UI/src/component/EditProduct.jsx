@@ -3,28 +3,28 @@ import { useNavigate, useParams } from 'react-router-dom'
 import ProductService from '../service/productService'
 
 const EditProduct = () => {
-  
+
   const [msg, setmsg] = useState("")
   const [product, setProduct] = useState({
-    id:"",
+    id: "",
     productName: "",
     description: "",
     price: "",
     status: "",
   })
 
-const navigate=useNavigate()
-  useEffect(()=>{
+  const navigate = useNavigate()
+  useEffect(() => {
     ProductService
-    .getProductById(id)
-    .then((res)=>{
-      setProduct(res.data)
-    })
-    .catch((error)=>{
-      console.log(error)
-    })
-  },[])
-const {id}=useParams();
+      .getProductById(id)
+      .then((res) => {
+        setProduct(res.data)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }, [])
+  const { id } = useParams();
   const handleChange = (e) => {
     const value = e.target.value;
     setProduct({ ...product, [e.target.name]: value })
@@ -64,22 +64,22 @@ const {id}=useParams();
                 <form onSubmit={(e) => { ProductUpdate(e) }} action="">
                   <div className='mb-3'>
                     <label htmlFor="">Enter Product Name</label>
-                    <input onChange={(e) => onchange(e)} type="text" name='productName' className='form-control' value={product.productName}/>
+                    <input onChange={(e) => handleChange(e)} type="text" name='productName' className='form-control' value={product.productName} />
 
                   </div>
                   <div className='mb-3'>
                     <label htmlFor="">Enter Description</label>
-                    <input onChange={(e) => onchange(e)} type="text" name='description' className='form-control'  value={product.description}/>
+                    <input onChange={(e) => handleChange(e)} type="text" name='description' className='form-control' value={product.description} />
 
                   </div>
                   <div className='mb-3'>
                     <label htmlFor="">Enter Status</label>
-                    <input onChange={(e) => onchange(e)} type="text" name='price' className='form-control' value={product.price}/>
+                    <input onChange={(e) => handleChange(e)} type="text" name='price' className='form-control' value={product.price} />
 
                   </div>
                   <div className='mb-3'>
                     <label htmlFor="">Enter Price</label>
-                    <input onChange={(e) => onchange(e)} type="text" name='status' className='form-control' value={product.status}/>
+                    <input onChange={(e) => handleChange(e)} type="text" name='status' className='form-control' value={product.status} />
 
                   </div>
                   <button className='btn btn-primary col-md-12'>

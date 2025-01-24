@@ -53,25 +53,25 @@ const AddProduct = () => {
                 </p>
               }
               <div className='card-body'>
-                <form onSubmit={(e) => { Productregister(e) }} action="">
+                <form onSubmit={(e) => { ProductRegister(e) }} action="">
                   <div className='mb-3'>
                     <label htmlFor="">Enter Product Name</label>
-                    <input onChange={(e) => onchange(e)} type="text" name='productName' className='form-control' value={product.productName}/>
+                    <input onChange={(e) => handleChange(e)} type="text" name='productName' className='form-control' value={product.productName}/>
 
                   </div>
                   <div className='mb-3'>
                     <label htmlFor="">Enter Description</label>
-                    <input onChange={(e) => onchange(e)} type="text" name='description' className='form-control'  value={product.description}/>
+                    <input onChange={(e) => handleChange(e)} type="text" name='description' className='form-control'  value={product.description}/>
 
                   </div>
                   <div className='mb-3'>
                     <label htmlFor="">Enter Status</label>
-                    <input onChange={(e) => onchange(e)} type="text" name='price' className='form-control' value={product.price}/>
+                    <input onChange={(e) => handleChange(e)} type="text" name='price' className='form-control' value={product.price}/>
 
                   </div>
                   <div className='mb-3'>
                     <label htmlFor="">Enter Price</label>
-                    <input onChange={(e) => onchange(e)} type="text" name='status' className='form-control' value={product.status}/>
+                    <input onChange={(e) => handleChange(e)} type="text" name='status' className='form-control' value={product.status}/>
 
                   </div>
                   <button className='btn btn-primary col-md-12'>
