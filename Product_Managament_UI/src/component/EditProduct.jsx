@@ -30,8 +30,6 @@ const EditProduct = () => {
     setProduct({ ...product, [e.target.name]: value })
   }
 
-
-
   const ProductUpdate = (e) => {
     e.prevantDefault();
     ProductService
