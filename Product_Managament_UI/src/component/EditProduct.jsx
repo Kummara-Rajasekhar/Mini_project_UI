@@ -39,6 +39,7 @@ const EditProduct = () => {
       .catch((error) => {
         console.log(error)
       })
+      
   }
   return (
     <>
