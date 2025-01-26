@@ -29,7 +29,6 @@ const EditProduct = () => {
     const value = e.target.value;
     setProduct({ ...product, [e.target.name]: value })
   }
-
   const ProductUpdate = (e) => {
     e.prevantDefault();
     ProductService
@@ -40,7 +39,6 @@ const EditProduct = () => {
       .catch((error) => {
         console.log(error)
       })
-
   }
   return (
     <>
