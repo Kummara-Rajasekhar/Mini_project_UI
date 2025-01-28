@@ -69,7 +69,6 @@ const AddProduct = () => {
                   <div className='mb-3'>
                     <label htmlFor="">Enter Price</label>
                     <input onChange={(e) => handleChange(e)} type="text" name='status' className='form-control' value={product.status}/>
-
                   </div>
                   <button className='btn btn-primary col-md-12'>
                     Submit
