@@ -66,6 +66,7 @@ const AddProduct = () => {
                     <label htmlFor="">Enter Status</label>
                     <input onChange={(e) => handleChange(e)} type="text" name='price' className='form-control' value={product.price}/>
                   </div>
+                  
                   <div className='mb-3'>
                     <label htmlFor="">Enter Price</label>
                     <input onChange={(e) => handleChange(e)} type="text" name='status' className='form-control' value={product.status}/>
