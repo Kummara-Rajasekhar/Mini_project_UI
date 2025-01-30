@@ -72,6 +72,7 @@ const AddProduct = () => {
                   </div>
                   <button className='btn btn-primary col-md-12'>
                     Submit
+                    
                   </button>
                 </form>
               </div>
