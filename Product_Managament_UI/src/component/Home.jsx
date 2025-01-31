@@ -4,14 +4,13 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
   const [productList, setProductList] = useState([])
-  const [msg,setmsg]=useState("")
+  const [msg, setmsg] = useState("")
 
   useEffect(() => {
     init();
 
   }, [])
-
-  const init=()=>{
+  const init = () => {
     ProductService
       .getAllProduct()
       .then((res) => {
@@ -22,17 +21,15 @@ const Home = () => {
         console.log(error)
       })
   }
-
-
-  const deleteProduct=(id)=>{
+  const deleteProduct = (id) => {
     ProductService.deleteProduct
-    .then((res)=>{
-      setmsg("Deleted Successfully")
-      init();
-    })
-    .catch((error)=>{
-      console.log(error)
-    })
+      .then((res) => {
+        setmsg("Deleted Successfully")
+        init();
+      })
+      .catch((error) => {
+        console.log(error)
+      })
   }
   return (
     <>
@@ -42,7 +39,7 @@ const Home = () => {
             <div className='card'>
               <div className='card-header fs-3 text-center'>
                 All Product List
-                { msg && <p className='fs-4 text-center text-success'>{ms}</p>}
+                {msg && <p className='fs-4 text-center text-success'>{ms}</p>}
               </div>
               <div className="card-body">
                 <table class="table">
@@ -60,14 +57,14 @@ const Home = () => {
                     {
                       productList.map((item, i) => {
                         <tr>
-                          <td>{i+1}</td>
+                          <td>{i + 1}</td>
                           <td>{item.productName}</td>
                           <td>{item.description}</td>
                           <td>{item.price}</td>
                           <td>{item.status}</td>
                           <td>
-                            <Link to={"editProduct"+item.id} className='btn btn-sm btn-primary'>Edit</Link>
-                            <button onClick={(e)=>deleteProduct(item.id)} to="" className='btn btn-sm btn-danger ms-1'>Delete</button>
+                            <Link to={"editProduct" + item.id} className='btn btn-sm btn-primary'>Edit</Link>
+                            <button onClick={(e) => deleteProduct(item.id)} to="" className='btn btn-sm btn-danger ms-1'>Delete</button>
                           </td>
                         </tr>
                       })
