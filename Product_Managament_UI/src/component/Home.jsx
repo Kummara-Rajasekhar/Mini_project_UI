@@ -71,7 +71,6 @@ const Home = () => {
                     }
                   </tbody>
                 </table>
-                
               </div>
             </div>
           </div>
