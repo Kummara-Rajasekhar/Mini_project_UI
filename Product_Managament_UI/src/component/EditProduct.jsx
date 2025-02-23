@@ -12,7 +12,6 @@ const EditProduct = () => {
     price: "",
     status: "",
   })
-
   const navigate = useNavigate()
   useEffect(() => {
     ProductService

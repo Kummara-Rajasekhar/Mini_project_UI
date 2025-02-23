@@ -19,6 +19,7 @@ const Navbar = () => {
                                 <Link to="addProduct" class="nav-link active" aria-current="page" href="#">Add Product</Link>
                             </li>
                             
+                            
                         </ul>
                     </div>
                 </div>
